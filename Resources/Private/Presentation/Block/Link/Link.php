@@ -21,6 +21,8 @@ final readonly class Link extends AbstractComponent
     public function __construct(
         private UriInterface $uri,
         private string|ComponentInterface $content,
+        private LinkVariant $variant = LinkVariant::VARIANT_DEFAULT,
+        private ?string $title = null,
         ?LinkTarget $linkTarget = null
     ) {
         $this->linkTarget = $linkTarget ?: LinkTarget::forUri($uri);
@@ -29,7 +31,10 @@ final readonly class Link extends AbstractComponent
     public function render(): string
     {
         return '
-            <a href="' . $this->uri . '" target="' . $this->linkTarget->value . '"' . $this->linkTarget->getRel() . '">'
+            <a href="' . $this->uri . '" target="' . $this->linkTarget->value . '"' . $this->linkTarget->getRel()
+                . '" class="' . $this->variant->getClasses()
+                . '" title="' . $this->title . '"'
+            . '">'
                 . $this->content
             . '</a>';
     }

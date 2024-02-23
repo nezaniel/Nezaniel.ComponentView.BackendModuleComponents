@@ -10,27 +10,23 @@ namespace Nezaniel\ComponentView\BackendModuleComponents\Presentation\Block\Tabl
 
 use Neos\Flow\Annotations as Flow;
 use Nezaniel\ComponentView\Domain\AbstractComponent;
-use Nezaniel\ComponentView\Domain\CacheSegment;
+use Nezaniel\ComponentView\Domain\ComponentInterface;
 
 #[Flow\Proxy(false)]
-final readonly class Table extends AbstractComponent
+final readonly class ActionTableCell extends AbstractComponent
 {
     public function __construct(
-        private TableRow $headRow,
-        private TableRows $bodyRows,
+        private ComponentInterface|string $content = '',
     ) {
     }
 
     public function render(): string
     {
         return '
-            <table class="neos-table">
-                <thead>
-                    ' . $this->headRow . '
-                </thead>
-                <tbody>
-                    ' . $this->bodyRows . '
-                </tbody>
-            </table>';
+            <td class="neos-action">
+                <div class="neos-pull-right">'
+                    . $this->content
+                . '</div>
+            </td>';
     }
 }

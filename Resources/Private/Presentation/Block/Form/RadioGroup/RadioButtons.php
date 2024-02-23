@@ -6,20 +6,20 @@
 
 declare(strict_types=1);
 
-namespace Nezaniel\ComponentView\BackendModuleComponents\Presentation\Block\Table;
+namespace Nezaniel\ComponentView\BackendModuleComponents\Presentation\Block\Form\RadioGroup;
 
 use Neos\Flow\Annotations as Flow;
 use Nezaniel\ComponentView\Domain\AbstractComponent;
 
 #[Flow\Proxy(false)]
-final readonly class TableCells extends AbstractComponent
+final readonly class RadioButtons extends AbstractComponent
 {
     /**
-     * @var array<TableCell|ActionTableCell>
+     * @var array<RadioButton>
      */
-    private array $items;
+    public array $items;
 
-    public function __construct(TableCell|ActionTableCell ...$items)
+    public function __construct(RadioButton ...$items)
     {
         $this->items = $items;
     }

@@ -16,8 +16,8 @@ use Nezaniel\ComponentView\Domain\ComponentInterface;
 final readonly class TableHead extends AbstractComponent
 {
     public function __construct(
-        private TableCellAlignment $alignment,
-        private ComponentInterface|string $content
+        private TableCellAlignment $alignment = TableCellAlignment::VARIANT_REGULAR,
+        private ComponentInterface|string $content = ''
     ) {
     }
 
