@@ -25,7 +25,7 @@ final readonly class RichTextArea extends AbstractComponent
 
     public function render(): string
     {
-        return $this->label. '<textarea id="' . $this->id . '" name="' . $this->name . '">
+        return $this->label . '<textarea id="' . $this->id . '" name="' . $this->name . '">
             </textarea>
             <script type="application/javascript">
                 ClassicEditor

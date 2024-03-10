@@ -10,9 +10,9 @@ namespace Nezaniel\ComponentView\BackendModuleComponents\Presentation\Block\Form
 
 use Neos\Flow\Annotations as Flow;
 use Nezaniel\ComponentView\BackendModuleComponents\Presentation\Block\Form\Label;
+use Nezaniel\ComponentView\BackendModuleComponents\Presentation\Block\Form\Placeholder;
+use Nezaniel\ComponentView\BackendModuleComponents\Presentation\Block\Form\RequiredStatement;
 use Nezaniel\ComponentView\Domain\AbstractComponent;
-use Nezaniel\Nortex\Presentation\Block\Form\Placeholder;
-use Nezaniel\Nortex\Presentation\Block\Form\RequiredStatement;
 
 #[Flow\Proxy(false)]
 final readonly class TextField extends AbstractComponent

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Nezaniel.Nortex package.
+ * This file is part of the Nezaniel.ComponentView.BackendModuleComponents package.
  */
 
 declare(strict_types=1);

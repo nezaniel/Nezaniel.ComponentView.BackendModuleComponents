@@ -26,7 +26,7 @@ final readonly class RadioButton extends AbstractComponent
     public function render(): string
     {
         return '<label class="neos-radio neos-inline">
-            <input type="radio" name="' . $this->name . '" value="' . $this->value .'" ' . $this->checked . '><span></span>
+            <input type="radio" name="' . $this->name . '" value="' . $this->value . '" ' . $this->checked . '><span></span>
             ' . $this->label . '
         </label>';
     }
