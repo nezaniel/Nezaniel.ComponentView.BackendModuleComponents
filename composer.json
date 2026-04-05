@@ -4,7 +4,7 @@
     "description": "ComponentView components for Neos CMS backend modules",
     "require": {
         "neos/neos": "^9.0",
-        "packagefactory/componentengine": "*",
+        "packagefactory/component-engine": "*",
         "php": "^8.2"
     },
     "require-dev": {
